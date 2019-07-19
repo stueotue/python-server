@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="main-section" id="service">
+    <div class='center'>
+        <h2>60 Gempa Terkini (Mag >= 5.0 SR)</h2>
+        <table id="jqGrid"></table>
+        <div id="jqGridPager"></div>
+    </div>
+    <div class='center' style="padding:180px 0 100px;">
+        <h2>Prakiraan Cuaca Manado</h2>
+        <table id="jqGrid2"></table>
+        <div id="jqGridPager2"></div>
+</div>
+<!-- 
+<div class='center' style="padding:100px 0 100px;">
+        <h2>Prakiraan Cuaca Maritim<br>Perairan Bitung - Manado</h2>
+        <table id="jqGrid3"></table>
+        <div id="jqGridPager3"></div>
+</div> -->
+        <script type="text/javascript" src="/js/datatable.js"></script>
+</section>
+{% endblock %}

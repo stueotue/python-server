@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+{% include 'header.html' %}
+<body>
+	<nav class="main-nav-outer" id="test">
+		<!--main-nav-start-->
+		<div class="container">
+			<ul class="main-nav">
+				<li><a href="/">Home</a></li>
+				<li class="small-logo"><a href="./logout"><img src="./images/logo.png" alt="" height='50' width="50"></a></li>
+				<li><a href="/data">Data</a></li>
+			</ul>
+			<a class="res-nav_click" href="#"><i class="fa fa-bars"></i></a>
+		</div>
+	</nav>
+	<!--main-nav-end-->
+	{% block content %}{% endblock %}
+	{% include 'footer.html' %}
+
+</body>
+
+</html>

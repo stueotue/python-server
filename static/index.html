@@ -23,6 +23,12 @@
     <script src="js/lib/jquery.i18n/jquery.i18n.emitter.bidi.js"></script>
     <script src="antixss.js" type="text/javascript"></script>
 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/json2html/1.2.0/json2html.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.json2html/1.2.0/jquery.json2html.min.js"></script>
+    
+    
     <script>
         $( document ).ready(function() {
             $.i18n().load( {
@@ -47,10 +53,29 @@
             $('#user_name').attr("placeholder", $.i18n('name') );
         });
         </script>
-
+<script>
+    var transform = {"tag":"table", "children":[
+        {"tag":"tbody","children":[
+            {"tag":"tr","children":[
+                {"tag":"td","html":"${name}"},
+                {"tag":"td","html":"${age}"}
+            ]}
+        ]}
+    ]};
+    
+    var data = [
+        {'name':'Bob','age':40},
+        {'name':'Frank','age':15},
+        {'name':'Bill','age':65},
+        {'name':'Robert','age':24}
+    ];
+    
+    $('#target_div').html(json2html.transform(data,transform));
+    </script>
 </head>
 
 <body>
+    <div id="target_div"></div>
     <a href='/logout'>
      <button type="button" class="btn btn-default btn-sm">
         <span class="glyphicon glyphicon-log-out"></span> Log out
