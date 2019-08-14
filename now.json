@@ -1,15 +1,6 @@
 {
     "name": "Python-Server",
-    "version": 2
-},
-
-{
-    "builds": [
-        
-        {
-            "src": "hello.py", "use" : "@now/python"
-        }
-    
-    ]
-
+    "version": 2,
+    "builds": [ { "src": "hello.py", "use": "@liudonghua123/now-flask" , "config": { "maxLambdaSize": "30mb" } } ],
+    "routes": [ { "src": "/.*", "dest": "/"}]
 }
