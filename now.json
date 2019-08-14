@@ -1,9 +1,15 @@
 {
     "name": "Python-Server",
-    "version": 2,
+    "version": 2
+},
+
+{
     "builds": [
+        
         {
             "src": "hello.py", "use" : "@now/python"
         }
+    
     ]
+
 }
