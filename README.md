@@ -1,3 +1,3 @@
-# Getting Started with Python on IBM Cloud
+# Simple microservice using python flask
 
-Source : https://github.com/IBM-Cloud/get-started-python
+# Display earthquake and weather data from BMKG
